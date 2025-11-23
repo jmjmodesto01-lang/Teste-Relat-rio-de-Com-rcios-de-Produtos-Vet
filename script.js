@@ -1,5 +1,5 @@
 // URL DO APPS SCRIPT
-const API = "YOUR_WEBAPP_URL_HERE";
+const API = "https://script.google.com/macros/s/AKfycbzeoHI1leUxQA9q3DnTsImauYk1DQwKZZBb-Rry2E90yNPqhrXulv5yplfw5fc_4M2t8g/exec";
 
 // Buscar autorizações
 document.getElementById("btnBuscar").onclick = async function () {
