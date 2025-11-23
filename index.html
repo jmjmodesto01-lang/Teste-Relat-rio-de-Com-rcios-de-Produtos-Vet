@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório Mensal - ADAPAR</title>
+  <script defer src="script.js"></script>
+  <style>
+    body { font-family: Arial; background:#f2f2f2; padding:20px; }
+    .card { background:#fff; padding:20px; border-radius:10px; max-width:900px; margin:auto; }
+    .hidden { display:none; }
+    label { font-weight:bold; margin-top:12px; display:block; }
+    input, select, textarea { width:100%; padding:8px; margin-top:4px; }
+    button { padding:10px 20px; margin-top:20px; cursor:pointer; }
+  </style>
+</head>
+<body>
+
+<div class="card">
+
+  <h2>Relatório Mensal - Produtos Veterinários</h2>
+
+  <!-- BUSCA CNPJ -->
+  <label>CNPJ do Estabelecimento</label>
+  <input id="cnpj" placeholder="00.000.000/0000-00">
+  <button id="btnBuscar">Buscar autorizações</button>
+
+  <p id="statusBusca"></p>
+
+  <!-- FORMULÁRIO PRINCIPAL OCULTO -->
+  <form id="formRelatorio" class="hidden">
+
+    <h3>Identificação</h3>
+    <label>Nome do Estabelecimento</label>
+    <input name="nome_estabelecimento">
+
+    <label>Mês e Ano</label>
+    <input name="mes_ano">
+
+    <label>Telefone</label>
+    <input name="telefone">
+
+    <label>Município</label>
+    <input name="municipio">
+
+    <label>Veterinário Responsável</label>
+    <input name="vet_responsavel">
+
+    <label>CRMV</label>
+    <input name="crmv">
+
+    <!-- SEÇÕES QUE ATIVAM DINAMICAMENTE -->
+    <div id="sec_aat" class="hidden">
+      <h3>Relatório AAT</h3>
+      <label>Saldo anterior</label><input name="aat_saldo_ant" type="number">
+      <label>Recebido</label><input name="aat_recebido" type="number">
+      <label>Comercializado</label><input name="aat_vendido" type="number">
+    </div>
+
+    <div id="sec_tb_bov" class="hidden">
+      <h3>Tuberculina Bovina</h3>
+      <label>Saldo anterior</label><input name="tb_bov_saldo_ant" type="number">
+      <label>Recebido</label><input name="tb_bov_recebido" type="number">
+      <label>Comercializado</label><input name="tb_bov_vendido" type="number">
+    </div>
+
+    <div id="sec_b19" class="hidden">
+      <h3>Vacina B19</h3>
+      <label>Saldo anterior</label><input name="b19_saldo_ant" type="number">
+      <label>Recebido</label><input name="b19_recebido" type="number">
+      <label>Comercializado</label><input name="b19_vendido" type="number">
+    </div>
+
+    <div id="sec_rb51" class="hidden">
+      <h3>Vacina RB51</h3>
+      <label>Saldo anterior</label><input name="rb51_saldo_ant" type="number">
+      <label>Recebido</label><input name="rb51_recebido" type="number">
+      <label>Comercializado</label><input name="rb51_vendido" type="number">
+    </div>
+
+    <div id="sec_raiva" class="hidden">
+      <h3>Vacina Raiva</h3>
+      <label>Frascos vendidos</label>
+      <input name="raiva_vendidos" type="number">
+    </div>
+
+    <div id="sec_pasta" class="hidden">
+      <h3>Pasta Vampiricida</h3>
+      <label>Tubos vendidos</label>
+      <input name="pasta_tubos" type="number">
+    </div>
+
+    <label>Observações</label>
+    <textarea name="obs"></textarea>
+
+    <button type="submit">Enviar relatório</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
